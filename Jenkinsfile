@@ -8,5 +8,10 @@ pipeline {
                 sh 'node --version'
             }
         }
+        stage ('Test2') {
+            steps {
+                sh 'echo "Hello from docker container"'
+            }
+        }
     }
 }
