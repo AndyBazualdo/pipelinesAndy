@@ -1,10 +1,10 @@
-pipeline{
-    agent{
-        images{ image 'node:7-alpine'}
+pipeline {
+    agent {
+        docker { image 'ubuntu'}
     }
-    stages{
-        stage('Test'){
-            steps{
+    stages {
+        stage ('Test'){
+            steps {
                 sh 'node --version'
             }
         }
