@@ -1,9 +1,9 @@
 pipeline {
     agent {
-        docker { image 'ubuntu'}
+        docker { image 'ubuntu' }
     }
     stages {
-        stage ('Test'){
+        stage('Test') {
             steps {
                 sh 'node --version'
             }
