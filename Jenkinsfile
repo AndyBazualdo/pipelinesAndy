@@ -1,6 +1,7 @@
 pipeline {
     agent {
-        docker { image 'ubuntu' }
+        //docker { image '' }
+        dockerfile true
     }
     stages {
         stage('Test') {
