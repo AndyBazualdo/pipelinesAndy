@@ -6,7 +6,7 @@ pipeline {
         stages {
             stage('Test') {
                 steps {
-                    sh './gradlew build'
+                    sh 'uname -a'
                 }
             }
             stage ('Test2') {
