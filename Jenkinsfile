@@ -48,7 +48,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                docker.image('gato756/awt04webservice_1.0:1.0')inside("sh './gradle build'")
+                @docker.image('gato756/awt04webservice_1.0:1.0')inside("sh './gradle build'")
             }
         }
     }
