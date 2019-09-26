@@ -32,8 +32,9 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'pwd'
-                sh 'echo JAVA_HOME'
-                sh './gradle build'
+                sh 'echo $JAVA_HOME'
+                sh 'ls -al'
+                //sh './gradle build'
                 echo 'finish building'
             }
         }
