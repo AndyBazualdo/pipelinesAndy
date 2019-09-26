@@ -29,11 +29,12 @@ pipeline {
             agent {
                 docker { image 'gato756/awt04webservice_1.0:1.0' }
                 //agent { dockerfile true }
+
+            }
+            steps {
                 docker.image('gato756/awt04webservice_1.0:1.0').inside {
                     sh 'pwd'
                 }
-            }
-            steps {
                 echo 'Building..'
                 sh 'pwd'
                 sh 'echo $JAVA_HOME'
