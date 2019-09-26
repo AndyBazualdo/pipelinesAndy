@@ -20,7 +20,7 @@ pipeline {
 }
 */
 
-
+/*
 pipeline {
     agent any
 
@@ -28,7 +28,9 @@ pipeline {
         stage('Build') {
             agent {
                 //docker { image 'gato756/awt04webservice_1.0:1.0' }
-                agent { dockerfile true }
+                agent {
+                    dockerfile true
+                 }
 
             }
             steps {
@@ -38,6 +40,6 @@ pipeline {
         }
     }
 }
-
+*/
 
 
