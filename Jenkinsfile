@@ -33,7 +33,7 @@ pipeline {
                 echo 'Building..'
                 sh 'pwd'
                 sh 'echo JAVA_HOME'
-                sh './gradlew build'
+                sh './gradle build'
                 echo 'finish building'
             }
         }
