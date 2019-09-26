@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                sh 'ls -al'
+                sh 'ls  /home/andy/DepOpsProject/AWT04-WebService/'
                 sh 'pwd'
             }
         }
