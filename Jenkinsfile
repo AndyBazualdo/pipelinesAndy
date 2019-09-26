@@ -37,6 +37,7 @@ pipeline {
     }
 }
 */
+/*
 pipeline {
     agent any
 
@@ -48,9 +49,22 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                @docker.image('gato756/awt04webservice_1.0:1.0')inside("sh './gradle build'")
+                @docker.image('gato756/awt04webservice_1.0:1.0')inside(" ./gradle build")
             }
         }
     }
 }
-
+*/
+pipeline {
+    agent any
+    tools {
+        jdk 'jdk8'
+    }
+    stages {
+        stage('Example') {
+            steps {
+                sh './gradlew build'
+            }
+        }
+    }
+}
