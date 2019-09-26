@@ -1,4 +1,6 @@
-/*pipeline {
+/*
+
+pipeline {
         agent {
             docker { image 'gato756/awt04webservice_1.0:1.0' }
             //dockerfile true
@@ -26,6 +28,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh './gradlew build'
+                echo 'finish building'
             }
         }
     }
