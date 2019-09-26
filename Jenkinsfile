@@ -30,8 +30,8 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                sh 'ls  /home/andy/DepOpsProject/AWT04-WebService/'
-                sh 'pwd'
+                sh 'cd /AWT04-WebService/ && ls -al && pwd'
+                sh './gradlew build'
             }
         }
     }
