@@ -31,6 +31,8 @@ pipeline {
             }
             steps {
                 echo 'Building..'
+                sh 'pwd'
+                sh 'echo JAVA_HOME'
                 sh './gradlew build'
                 echo 'finish building'
             }
