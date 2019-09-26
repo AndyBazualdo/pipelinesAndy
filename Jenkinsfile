@@ -1,7 +1,7 @@
 pipeline {
     agent {
-        //docker { image '' }
-        dockerfile true
+        docker { image 'gato756/awt04webservice_1.0' }
+        //dockerfile true
     }
     stages {
         stage('Test') {
