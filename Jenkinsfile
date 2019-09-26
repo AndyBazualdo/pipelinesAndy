@@ -3,7 +3,6 @@
 pipeline {
         agent {
             docker { image 'gato756/awt04webservice_1.0:1.0' }
-            //dockerfile true
         }
         stages {
             stage('Test') {
@@ -20,7 +19,7 @@ pipeline {
 }
 */
 
-/*
+
 pipeline {
     agent any
 
@@ -32,11 +31,12 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'ls -al'
+                sh 'pwd'
             }
         }
     }
 }
-*/
+
 /*
 pipeline {
     agent any
@@ -55,16 +55,3 @@ pipeline {
     }
 }
 */
-pipeline {
-    agent any
-    tools {
-        jdk 'jdk8'
-    }
-    stages {
-        stage('Example') {
-            steps {
-                sh './gradlew build'
-            }
-        }
-    }
-}
