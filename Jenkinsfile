@@ -27,15 +27,18 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                //docker { image 'gato756/awt04webservice_1.0:1.0' }
-                agent { dockerfile true }
+                docker { image 'gato756/awt04webservice_1.0:1.0' }
+                //agent { dockerfile true }
+                docker.image('gato756/awt04webservice_1.0:1.0').inside {
+                    sh 'pwd'
+                }
             }
             steps {
                 echo 'Building..'
                 sh 'pwd'
                 sh 'echo $JAVA_HOME'
                 sh 'ls -al'
-                sh './gradle build'
+                //sh './gradle build'
                 echo 'finish building'
             }
         }
