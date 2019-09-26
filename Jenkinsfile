@@ -30,8 +30,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                sh 'cd /AWT04-WebService/ && ls -al && pwd'
-                sh './gradlew build'
+                sh 'cd /AWT04-WebService/ && ls -al && pwd && ./gradlew build'
             }
         }
     }
